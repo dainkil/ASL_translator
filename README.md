@@ -55,7 +55,7 @@
 ## 시스템 아키텍처
 
 ### Track A — RGB 기반 파이프라인
-'''
+```
 Sign Video (RGB)
 ↓
 Frame Sampling (64 frames)
@@ -71,13 +71,13 @@ Adapter Module
 T5-Base Decoder (beam search, size=4)
 ↓
 번역 문장 (English)
-'''
+```
 대규모 비전 모델의 표현력을 유지하면서 Adapter만 학습하는 구조를 채택하여, 제한된 GPU 환경에서도 영상 기반 번역이 가능하도록 설계했습니다.
 
 ---
 
 ### Track B — 랜드마크 기반 파이프라인
-'''
+```
 Sign Video (RGB)
 ↓
 MediaPipe Holistic
@@ -104,7 +104,7 @@ Projection Layer
 T5-Small Decoder
 ↓
 번역 문장 (English)
-'''
+```
 RGB 영상 대비 훨씬 가벼운 랜드마크 좌표만을 사용하되, Multi-Stream 구조를 통해 신체 부위별 구조적 패턴을 효과적으로 학습하고 실시간 추론이 가능하도록 설계했습니다.
 
 ---
@@ -182,16 +182,6 @@ G2에서 BLEU는 소폭 낮아졌으나 METEOR가 약 14.6% 상승했습니다. 
 
 ---
 
-## 팀원
-
-| 이름 | GitHub |
-|------|--------|
-| 이서희 | - |
-| 길다인 | [@dainkil](https://github.com/dainkil) |
-| 김채린 | - |
-| 이종민 | - |
-
----
 
 ## 보고서
 
